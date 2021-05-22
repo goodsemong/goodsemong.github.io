@@ -30,7 +30,7 @@ twitter_username: None
 github_username:  goodsemong
 
 # Build settings
-theme: minima
+theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
