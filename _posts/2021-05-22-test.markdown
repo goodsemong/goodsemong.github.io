@@ -1,7 +1,0 @@
----
-layout: post
-title:  "test page"
-date:   2021-05-22 20:22:20 +0900
----
-test
-ㅓㅠㅓㅠㅓㅎㅗㅍㅗㅍㅗㅍㅗ
