@@ -1,6 +1,10 @@
+# coding: utf-8
 source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
+
+# 어드민페이지로 들어갈 수 있음
+gem 'jekyll-admin', group: :jekyll_plugins
 
 gem "tzinfo-data"
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
