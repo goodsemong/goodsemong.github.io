@@ -23,7 +23,7 @@ name                     : "Eddy Jung"
 description              : "두뇌의 저장공간 일부분을 이곳에 저장 하노라 .. "
 url                      : "https://goodsemong.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "goodsemong/goodsemong.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "goodsemong/goodsemong.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : *tt # overrides the website title displayed in the masthead, use " " for no title
