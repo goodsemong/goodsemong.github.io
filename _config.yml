@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" #"default" # "air", "aqua", "contrast", "da
 locale                   : "ko-KR"
 title                    : &tt "Semong Verification World"
 title_separator          : "-"
-subtitle                 : "끝은 처음부터 없었어... There is no end from the beginning.."# site tagline that appears below site title in masthead
+subtitle                 : "There is no end from the beginning.." # site tagline that appears below site title in masthead
 name                     : "Eddy Jung"
 description              : "두뇌의 저장공간 일부분을 이곳에 저장 하노라 .. "
 url                      : "https://goodsemong.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -94,11 +94,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Eddy(Semong)"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "시스템 검증 엔지니어 입니다."
+  location         : "대한민국 (South Korea)"
+  email            : "goodsemong@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
