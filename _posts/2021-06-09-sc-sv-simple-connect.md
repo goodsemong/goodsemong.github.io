@@ -9,7 +9,7 @@ SystemC 의 클래스와 같은 더미 SystemVerilog 모델을 만들어서
 알단 아래와 같은 SystemC 모듈이 있다고 했을때 
 ```c++
 #SC_MODULE(model){
-clas model : public sc_model{
+class model : public sc_model{
  sc_in<sc_logic> in;
  sc_out<sc_logic> out;
  SC_CTOR(model) : in("in"),out("out"){
