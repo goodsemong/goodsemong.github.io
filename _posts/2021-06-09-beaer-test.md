@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "bear editor test"
-date:   2021-06-09 12:00
 ---
 
 # 베어에 환영합니다
