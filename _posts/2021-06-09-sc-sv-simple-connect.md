@@ -7,7 +7,7 @@ SystemC 의 클래스와 같은 더미 SystemVerilog 모델을 만들어서
 그 System Verilog 모델과 SystemC 를 같이 컴파일 해서 하는 방법이다. 
 
 알단 아래와 같은 SystemC 모듈이 있다고 했을때 
-```C++
+```c++
 #SC_MODULE(model){
 clas model : public sc_model{
  sc_in<sc_logic> in;
@@ -24,7 +24,7 @@ clas model : public sc_model{
 ```
 
 같은 이름의 SystemVerilog를 만들어 준다. (Verilog 가 될수도 있고 )
-```SystemVerilog
+```verilog
 // Note module name must match exactly name of sc_module class in SystemC
 module model(in,out)
 // Note that the forigen attribute string value must be "SystemC"
