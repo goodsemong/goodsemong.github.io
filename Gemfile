@@ -3,7 +3,9 @@ source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
 
-gem "jekyll"
+gem "jekyll", "~> 3.5"
+#gem "jekyll"
+
 #gem "minimal-mistakes-jekyll"
 gem "minimal-mistakes-jekyll", :github => "mmistakes/minimal-mistakes"
 
@@ -22,4 +24,7 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-algolia"
   gem "jekyll-include-cache"
+  gem 'jekyll-archives'
 end
+
+gem "webrick", "~> 1.8"

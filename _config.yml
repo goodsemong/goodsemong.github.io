@@ -10,16 +10,16 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : &tt "Semong Verification World"
-title_separator          : "-"
+title_separator          : "|"
 subtitle                 : "There is no end from the beginning.." # site tagline that appears below site title in masthead
-name                     : "Eddy Jung"
+name                     : "Semong"
 description              : "두뇌의 저장공간 일부분을 이곳에 저장 하노라 .. "
 url                      : "https://goodsemong.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -27,10 +27,9 @@ repository               : "goodsemong/goodsemong.github.io" # GitHub username/r
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : *tt # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+breadcrumbs              : false # true, false (default)
 comments:
-  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "false" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -52,8 +51,8 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
@@ -94,15 +93,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Eddy(Semong)"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "시스템 검증 엔지니어 입니다."
+  name             : "Semong"
+  avatar           : "/assets/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "고단하고나."
   location         : "대한민국 (South Korea)"
   email            : "goodsemong@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      # url: "mailto:goodsemong@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -220,6 +219,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -248,16 +248,17 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-#jekyll-archives:
-#  enabled:
-#   - categories
-#   - tags
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
 #   layouts:
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
 #   permalinks:
 #     category: /categories/:name/
 #     tag: /tags/:name/
+
 
 # HTML Compression
 # - https://jch.penibelst.de/
@@ -266,7 +267,13 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  systemverilog:
+    output: true
+    permalink: /:collection/:path/
 
+  
 # Defaults
 defaults:
   # _posts
@@ -276,12 +283,31 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
-      share: true
+      share: false
       related: true
       toc: true
       toc_ads: true
       toc_sticky: true
-      
+      sidebar: { nav: "docs" }
+      show_date: true
+
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+  # _systemverilog
+  - scope:
+      path: ""
+      type: systemverilog
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      sidebar: { nav: "systemverilog" }
       
