@@ -134,8 +134,6 @@ GEM
       nokogiri (~> 1.6)
       progressbar (~> 1.9)
       verbal_expressions (~> 0.1.5)
-    jekyll-archives (2.2.1)
-      jekyll (>= 3.6, < 5.0)
     jekyll-avatar (0.7.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-coffeescript (1.1.1)
@@ -315,7 +313,6 @@ DEPENDENCIES
   jekyll (~> 3.5)
   jekyll-admin
   jekyll-algolia
-  jekyll-archives
   jekyll-feed
   jekyll-gist
   jekyll-include-cache
