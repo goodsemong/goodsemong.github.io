@@ -1,0 +1,66 @@
+---
+title:  "RISC-V TLM 실행해보기"
+tags: 
+    - riscv
+---
+
+## 사전 설치 된거 확인 
+boost library
+spdlog lib <= 같이 받을수있음
+Doxygen 
+
+
+### BOOST Library 설치 
+```shell
+wget https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.gz
+tar xvfz boost_1_82_0.tar.gz
+cd boost_1_82_0
+./bootstrap.sh
+./bootstrap.sh --with-python=python3 # Python 라이브러리 같이 설치 
+sudo ./b2 install
+```
+일단 위에꺼는 잘 안되서..
+
+```shell
+sudo apt install libboost-all-dev
+
+sudo apt install aptitude
+
+aptitude search boost
+```
+이렇게 ..
+
+### Lua Lib 설치 하기
+```shell
+$ wget http://www.lua.org/ftp/lua-5.4.2.tar.gz
+$ tar zxf lua-5.4.2.tar.gz
+$ make && make install
+```
+
+
+###  Tool 기본 환경 
+```shell
+export SYSTEMC_HOME=/opt/systemc
+export LD_LIBRARY_PATH=$SYSTEMC_HOME/lib-linux64
+#export BOOST_ROOT=
+export SPDLOG_HOME=/home/semong/work/RISC-V-TLM/spdlog/install
+
+```
+
+
+#### zicsr 이 없다고 나오는 경우 
+```shell
+make: Entering directory '/home/semong/work/riscv-simple-core/sw/printf'
+riscv32-unknown-elf-gcc bootstrap.S main.c firmware.c -o main -march=rv32i -mabi=ilp32 -nostartfiles -Wl,--no-relax -T link.ld
+bootstrap.S: Assembler messages:
+bootstrap.S:16: Error: unrecognized opcode `csrw mtvec,t0', extension `zicsr' required
+bootstrap.S:94: Error: unrecognized opcode `csrr t2,mcause', extension `zicsr' required
+bootstrap.S:125: Error: unrecognized opcode `csrr t0,mepc', extension `zicsr' required
+bootstrap.S:127: Error: unrecognized opcode `csrw mepc,t0', extension `zicsr' required
+make: *** [Makefile:2: all] Error 1
+make: Leaving directory '/home/semong/work/riscv-simple-core/sw/printf'
+semong@SEMONG-DESK:~/work/riscv-simple-core$ vi Makefile
+
+```
+
+riscv 컴파일 해볼려고 햇는데... "zicsr" 이 요구 된다고 나온다.  일단 -march=rv32i 를 -march=rv32i_zicsr_zifencei 로 변경 해서 돌림.  기본 지원 하다가 없어 진건지 .. 여튼 저렇게.. 하면 됨
