@@ -1,10 +1,6 @@
 ---
-title: Portfolio
-layout: collection
-permalink: /year-archivea/
-collection: portfolio
-entries_layout: grid
-classes: wide
+title: "Posts by Year"
+permalink: /year-archive/
+layout: posts
+author_profile: true
 ---
-
-Sample document listing for the collection `_portfolio`.

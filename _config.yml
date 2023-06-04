@@ -125,7 +125,6 @@ footer:
       icon: "fab fa-fw fa-twitter-square"
       # url:
     - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -269,7 +268,10 @@ compress_html:
 
 # Collections
 collections:
-  systemverilog:
+  language:
+    output: true
+    permalink: /:collection/:path/
+  riscv:
     output: true
     permalink: /:collection/:path/
 
@@ -290,8 +292,19 @@ defaults:
       toc: true
       toc_ads: true
       toc_sticky: true
-      sidebar: { nav: "docs" }
+#      sidebar: { nav: "docs" }
       show_date: true
+      
+  - scope:
+      path: ""
+      type: tag
+    values:
+      author_profile: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
 
   # _pages
   - scope:
@@ -301,13 +314,37 @@ defaults:
       layout: single
       author_profile: true
 
-  # _systemverilog
+  # _language
   - scope:
       path: ""
-      type: systemverilog
+      type: language
     values:
       layout: single
       author_profile: true
-      share: true
-      sidebar: { nav: "systemverilog" }
+      read_time: false
+      comments: true
+      share: false
+      related: true
+      toc: true
+      toc_ads: true
+      toc_sticky: true
+      sidebar: { nav: "language_sidebar" }
+      show_date: true
+
+  # _risv
+  - scope:
+      path: ""
+      type: riscv
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: true
+      share: false
+      related: true
+      toc: true
+      toc_ads: true
+      toc_sticky: true
+      sidebar: { nav: "riscv_sidebar" }
+      show_date: true
       

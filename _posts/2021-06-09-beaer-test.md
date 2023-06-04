@@ -1,5 +1,9 @@
 ---
 title:  "bear editor test"
+categories:
+    - test
+tags:
+    - you
 ---
 
 # 베어에 환영합니다
